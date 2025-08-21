@@ -58,7 +58,7 @@ Hardware: [T4 GPU ]
 ```python
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 
-model_name = "your-username/marianmt-en-hi-qlora"
+model_name = "54gO/marianmt-en-hi-translator"
 
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForSeq2SeqLM.from_pretrained(model_name)
