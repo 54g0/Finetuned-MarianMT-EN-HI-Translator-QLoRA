@@ -1,5 +1,7 @@
-MarianMT English → Hindi Translator (Fine-tuned with QLoRA)
--- Project Overview
+**MarianMT English → Hindi Translator (Fine-tuned with QLoRA)**
+
+
+-- **Project Overview**
 
 This project demonstrates how to fine-tune a MarianMT model (Helsinki-NLP/opus-mt-en-hi) for English → Hindi translation using QLoRA (Quantized Low-Rank Adaptation).
 
@@ -14,7 +16,7 @@ Compared to the base MarianMT model:
 The fine-tuned model is publicly available on 🤗 Hugging Face Hub:
 -> 54gO/marianmt-en-hi-qlora
 
-"""Key Features"""
+**Key Features**
 
 Fine-tuned using QLoRA for efficiency
 
@@ -25,7 +27,7 @@ Evaluated on BLEU, CHRF, METEOR, TER
 Fully open-source pipeline: reproducible training, evaluation, and usage
 
 
-Results & Benchmarks
+**Results & Benchmarks**
 
 | Metric              | Base Model | Fine-tuned Model   |
 | ------------------- | ---------- | -----------------  |
@@ -36,7 +38,7 @@ Results & Benchmarks
 | **Inference Speed** | 1x            | **\~4x faster** |
 
 
--- Training Details
+**Training Details**
 
 Base Model: Helsinki-NLP/opus-mt-en-hi
 
@@ -52,7 +54,7 @@ Learning rate: 1e-4
 
 Hardware: [T4 GPU ]
 
--- How to Use
+**How to Use**
 python ```
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 
@@ -66,5 +68,4 @@ inputs = tokenizer(text, return_tensors="pt")
 outputs = model.generate(**inputs)
 
 print(tokenizer.decode(outputs[0], skip_special_tokens=True))
-# Output: "आप कैसे हैं?"
-```
+Output: "आप कैसे हैं?"
