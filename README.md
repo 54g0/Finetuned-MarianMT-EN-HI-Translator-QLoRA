@@ -54,8 +54,8 @@ Learning rate: 1e-4
 
 Hardware: [T4 GPU ]
 
-**How to Use**
-python ```
+**How to Use as an English to Hindi Translator**
+```python
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 
 model_name = "your-username/marianmt-en-hi-qlora"
