@@ -18,7 +18,6 @@ base_model = AutoModelForSeq2SeqLM.from_pretrained(
 model = PeftModel.from_pretrained(base_model, peft_model_path)
 tokenizer = AutoTokenizer.from_pretrained(peft_model_path)
 
-# ---- Inference class ----
 class Inference:
     def __init__(self, model, tokenizer):
         self.model = model
